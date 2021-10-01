@@ -1,5 +1,5 @@
 
-// Iterative function to implement Binary Search
+
 let iterativeFunction = function (arr, x) {
   
     let start=0, end=arr.length-1;

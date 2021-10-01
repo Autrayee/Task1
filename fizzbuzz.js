@@ -1,11 +1,40 @@
-function fizzBuzz2(n) {
-    for (let i = 1; i <= n; i++) {
-      let str = "";
-  
-      if (i % 3 === 0) str += "fizz"
-      if (i % 5 === 0) str += "buzz"
-      if (str === "") str = i;
-    
-      console.log(str);
-    }
+function isDivisible(numa, num) {
+  if (numa % num == 0) {
+    return true;
+  } else {
+    return false;
   }
+};
+
+function by3(num) {
+  if (isDivisible(num, 3)) {
+    console.log("Fizz");
+  } else {
+    return false;
+  }
+};
+
+function by5(num) {
+  if (isDivisible(num, 5)) {
+    console.log("Buzz");
+  } else {
+    return false;
+  }
+};
+
+for (var a=1; a<=100; a++) {
+  if (by3(a)) {
+    by3(a);
+    if (by5(a)) {
+      by5(a);
+      console.log("\n");
+    } else {
+      console.log("\n");
+    }
+  } else if (by5(a)) {
+    by5(a);
+    console.log("\n");
+  } else {
+    console.log(a+"\n")
+  }
+}
